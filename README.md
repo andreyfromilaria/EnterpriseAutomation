@@ -31,8 +31,8 @@ int main(int argc, const char * argv[])
 ``` C++
 int main(int argc, const char * argv[])
 {
-    NiceExample("/Users/ИмяТекущегоПользователя/NiceExample.xls");
-    LiteExample("/Users/ИмяТекущегоПользователя/NiceExample.xls");
+    NiceExample("/Users/ИмяТекущегоПользователя/Documents/NiceExample.xls");
+    LiteExample("/Users/ИмяТекущегоПользователя/Documents/LiteExample.xls");
     return 0;
 }
 ```
