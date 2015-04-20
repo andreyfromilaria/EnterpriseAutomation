@@ -1,0 +1,28 @@
+project(EnterpriseAutomation)
+
+cmake_minimum_required(VERSION 2.8)
+
+SET(CMAKE_CXX_FLAGS "-std=c++0x")
+
+set(EA_SOURCES 
+	Src/BasicExcel.cxx
+	Src/ExcelFormat.cxx
+)
+
+set(EA_HEADERS
+	Include/Ilaria.hxx
+	Include/BasicExcel.hxx
+	Include/ExcelFormat.hxx
+)
+
+set(EA_INCLUDE_DIRS 
+	Include
+)
+
+set(EA_LIBRARIES EA)
+
+include_directories(${EA_INCLUDE_DIRS})
+
+add_library(EA ${EA_SOURCES} ${EA_HEADERS})
+
+add_subdirectory(Main)
