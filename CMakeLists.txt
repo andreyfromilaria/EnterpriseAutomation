@@ -7,12 +7,18 @@ SET(CMAKE_CXX_FLAGS "-std=c++0x")
 set(EA_SOURCES 
 	Src/BasicExcel.cxx
 	Src/ExcelFormat.cxx
+	Src/CSubject.cxx
 )
 
 set(EA_HEADERS
 	Include/Ilaria.hxx
 	Include/BasicExcel.hxx
 	Include/ExcelFormat.hxx
+	Include/CEnterprise.hxx
+	Include/CObserver.hxx
+	Include/CSubject.hxx
+	Include/IlariaTypes.hxx
+	Include/Ratios.hxx
 )
 
 set(EA_INCLUDE_DIRS 
