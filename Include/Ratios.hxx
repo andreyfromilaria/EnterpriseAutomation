@@ -2,14 +2,17 @@
 #define _RATIOS_H_
 
 #include "IlariaTypes.hxx"
+#include "IObserver.hxx"
 
 namespace Ilaria
 {
-    class IRatio
+    class IRatio : public CObserver
     {
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+        friend class CEnterprise;
     };
     
     class ILiquidityAndSolvencyRatio : public IRatio
@@ -17,6 +20,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class ILiquidityAndSolvencyRatio : public IRatio
@@ -24,6 +29,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class IBusinessActivityRatio : public IRatio
@@ -31,6 +38,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class IProfitabilityRatio : public IRatio
@@ -38,6 +47,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CQuickRatio : public ILiquidityAndSolvencyRatio
@@ -45,6 +56,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CCurrentLiquidityRatio : public ILiquidityAndSolvencyRatio
@@ -52,6 +65,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CCoverageReservesRatio : public ILiquidityAndSolvencyRatio
@@ -59,6 +74,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CFinancialDependenceRatio : public IFinancialStabilityRatio
@@ -66,6 +83,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class COwnFundsAutonomyRatio : public IFinancialStabilityRatio
@@ -73,6 +92,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CStocksWorkingCapitalRatio : public IFinancialStabilityRatio
@@ -80,6 +101,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CConstantAssetRatio : public IFinancialStabilityRatio
@@ -87,6 +110,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CTurnoverAssetsRatio : public IBusinessActivityRatio
@@ -94,6 +119,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CTurnoverAccountsPayableRatio : public IBusinessActivityRatio
@@ -101,6 +128,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CTurnoverReceivablesRatio : public IBusinessActivityRatio
@@ -108,6 +137,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CTurnoverStocksRatio : public IBusinessActivityRatio
@@ -115,6 +146,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class COverallprofitabilityRatio : public IProfitabilityRatio
@@ -122,6 +155,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CReturnOnAssetsRatio : public IProfitabilityRatio
@@ -129,6 +164,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CROERatio : public IProfitabilityRatio
@@ -136,6 +173,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
     
     class CReturnOnSalesRatio : public IProfitabilityRatio
@@ -143,6 +182,8 @@ namespace Ilaria
         public:
             virtual RatioType GetValue()     = 0;
             virtual E_RATIO_STATE GetState() = 0;
+        
+            friend class CEnterprise;
     };
 };
 

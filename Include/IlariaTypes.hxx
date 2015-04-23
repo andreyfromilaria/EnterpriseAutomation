@@ -3,7 +3,7 @@
 
 namespace Ilaria
 {
-    typedef float RatioType;
+    typedef float real;
     
     enum E_RATIO_STATE
     {
