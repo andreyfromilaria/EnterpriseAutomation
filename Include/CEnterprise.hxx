@@ -116,7 +116,7 @@ namespace Ilaria
         void SetBorrowings(const real& AValue);
         void SetTotalLiabilities(const real& AValue);
         void SetNetWorkingCapital(const real& AValue);
-        void SetInterestPayable(const real& AValue)const real& AValue;
+        void SetInterestPayable(const real& AValue);
         void SetMarketValueOfEquity(const real& AValue);
         void SetCostTotalDebt(const real& AValue);
         void SetTangibleAssets(const real& AValue);
