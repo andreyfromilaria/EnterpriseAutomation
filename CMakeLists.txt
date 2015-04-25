@@ -8,6 +8,7 @@ set(EA_SOURCES
 	Src/BasicExcel.cxx
 	Src/ExcelFormat.cxx
 	Src/CSubject.cxx
+	Src/CEnterprise.cxx
 )
 
 set(EA_HEADERS
