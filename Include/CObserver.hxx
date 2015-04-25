@@ -12,7 +12,7 @@ namespace Ilaria
         public:
             CObserver(CSubject* ASubject) : _pSubject(ASubject) {} ;
             CSubject* GetSubject() { return _pSubject; } ;
-            virtual void Update() = 0;
+            virtual void Update(CSubject* ASubject) = 0;
     };
 };
 

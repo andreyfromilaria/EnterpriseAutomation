@@ -65,7 +65,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
         
         friend class CEnterprise;
     };
@@ -80,7 +80,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
         
         friend class CEnterprise;
     };
@@ -97,7 +97,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
         
         friend class CEnterprise;
     };
@@ -113,7 +113,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
         
         friend class CEnterprise;
     };
@@ -129,7 +129,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -145,7 +145,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -161,7 +161,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -174,7 +174,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -189,7 +189,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -204,7 +204,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -217,7 +217,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -232,7 +232,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -245,7 +245,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -260,7 +260,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };
@@ -273,7 +273,7 @@ namespace Ilaria
     public:
         virtual real GetValue()          = 0;
         virtual E_RATIO_STATE GetState() = 0;
-        virtual void Update();
+        virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
     };

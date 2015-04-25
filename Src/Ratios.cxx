@@ -152,77 +152,77 @@ namespace Ilaria
         return Ilaria::GetState(_Value, -12, 0, 4, 12, 24, 50);
     };
 
-    void CQuickRatio::Update()
+    void CQuickRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CCurrentLiquidityRatio::Update()
+    void CCurrentLiquidityRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CCoverageReservesRatio::Update()
+    void CCoverageReservesRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CFinancialDependenceRatio::Update()
+    void CFinancialDependenceRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void COwnFundsAutonomyRatio::Update()
+    void COwnFundsAutonomyRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CStocksWorkingCapitalRatio::Update()
+    void CStocksWorkingCapitalRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CConstantAssetRatio::Update()
+    void CConstantAssetRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CTurnoverAssetsRatio::Update()
+    void CTurnoverAssetsRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CTurnoverAccountsPayableRatio::Update()
+    void CTurnoverAccountsPayableRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CTurnoverReceivablesRatio::Update()
+    void CTurnoverReceivablesRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CTurnoverStocksRatio::Update()
+    void CTurnoverStocksRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void COverallProfitabilityRatio::Update()
+    void COverallProfitabilityRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CReturnOnAssetsRatio::Update()
+    void CReturnOnAssetsRatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CROERatio::Update()
+    void CROERatio::Update(CSubject* ASubject)
     {
         
     };
     
-    void CReturnOnSalesRatio::Update()
+    void CReturnOnSalesRatio::Update(CSubject* ASubject)
     {
         
     };
