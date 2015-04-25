@@ -8,11 +8,11 @@ namespace Ilaria
     class CObserver;
     class CSubject
     {
-        private:
-            std::vector<CObserver*> _vObservers;
-        public:
-            void Notify();
-            void AddObserver(CObserver* AnObserver);
+    protected:
+        std::vector<CObserver*> _vObservers;
+    public:
+        virtual void Notify() = 0;
+        virtual void AddObserver(CObserver* AnObserver);
     };
 };
 

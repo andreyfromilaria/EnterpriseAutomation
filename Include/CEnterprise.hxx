@@ -13,6 +13,8 @@ namespace Ilaria
         real _Stocks;
         real _ValueAddedTax;
         real _Receivables;
+        real _MaxReceivables;
+        real _MinReceivables;
         real _CurrentLiability;
         real _DefferedIncome;
         real _LongTermCommitment;
@@ -55,6 +57,8 @@ namespace Ilaria
         real GetStocks();
         real GetValueAddedTax();
         real GetReceivables();
+        real GetMaxReceivables();
+        real GetMinReceivables();
         real GetCurrentLiability();
         real GetDefferedIncome();
         real GetLongTermCommitment();
@@ -97,6 +101,8 @@ namespace Ilaria
         void SetStocks(const real& AValue);
         void SetValueAddedTax(const real& AValue);
         void SetReceivables(const real& AValue);
+        void SetMaxReceivables(const real& AValue);
+        void SetMinReceivables(const real& AValue);
         void SetCurrentLiability(const real& AValue);
         void SetDefferedIncome(const real& AValue);
         void SetLongTermCommitment(const real& AValue);
@@ -134,6 +140,8 @@ namespace Ilaria
         void SetNetLoss(const real& AValue);
         void SetSales(const real& AValue);
         void SetProfitOnSales(const real& AValue);
+        
+        virtual void Notify();
     };
 };
 

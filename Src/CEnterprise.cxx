@@ -1,7 +1,16 @@
 #include "CEnterprise.hxx"
+#include "CObserver.hxx"
 
 namespace Ilaria
 {
+    void CEnterprise::Notify()
+    {
+        for (std::vector<CObserver*>::iterator i = _vObservers.begin(); i != _vObservers.end(); i++)
+        {
+            (*i)->Update(this);
+        };
+    };
+    
     real CEnterprise::GetTurnaroundActives()
     {
         return _TurnaroundActives;
@@ -20,6 +29,16 @@ namespace Ilaria
     real CEnterprise::GetReceivables()
     {
         return _Receivables;
+    };
+    
+    real CEnterprise::GetMaxReceivables()
+    {
+        return _MaxReceivables;
+    };
+    
+    real CEnterprise::GetMinReceivables()
+    {
+        return _MinReceivables;
     };
     
     real CEnterprise::GetCurrentLiability()
@@ -225,6 +244,16 @@ namespace Ilaria
     void CEnterprise::SetReceivables(const real& AValue)
     {
         _Receivables = AValue;
+    };
+    
+    void CEnterprise::SetMaxReceivables(const real& AValue)
+    {
+        _MaxReceivables = AValue;
+    };
+    
+    void CEnterprise::SetMinReceivables(const real& AValue)
+    {
+        _MinReceivables = AValue;
     };
     
     void CEnterprise::SetCurrentLiability(const real& AValue)

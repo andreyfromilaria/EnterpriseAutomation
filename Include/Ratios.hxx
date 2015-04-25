@@ -59,7 +59,7 @@ namespace Ilaria
         real _TurnaroundActives;
         real _Stocks;
         real _ValueAddedTax;
-        real _Receivables;
+        real _MaxReceivables;
         real _CurrentLiability;
         real _DefferedIncome;
     public:
@@ -74,7 +74,7 @@ namespace Ilaria
     {
     private:
         real _TurnaroundActives;
-        real _Receivables;
+        real _MaxReceivables;
         real _CurrentLiability;
         real _DefferedIncome;
     public:
@@ -154,7 +154,7 @@ namespace Ilaria
     {
     private:
         real _NonCurrentAssets;
-        real _Receivables;
+        real _MaxReceivables;
         real _CapitalAndReserves;
         real _TargetFinancingAndReceipts;
         real _DefferedIncome;

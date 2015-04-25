@@ -1,4 +1,5 @@
 #include "Ratios.hxx"
+#include "CEnterprise.hxx"
 
 namespace Ilaria
 {
@@ -154,76 +155,226 @@ namespace Ilaria
 
     void CQuickRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _TurnaroundActives  = enterprise->GetTurnaroundActives();
+            _Stocks             = enterprise->GetStocks();
+            _ValueAddedTax      = enterprise->GetValueAddedTax();
+            _MaxReceivables     = enterprise->GetMaxReceivables();
+            _CurrentLiability   = enterprise->GetCurrentLiability();
+            _DefferedIncome     = enterprise->GetDefferedIncome();
+            
+            
+        };
     };
     
     void CCurrentLiquidityRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _TurnaroundActives  = enterprise->GetTurnaroundActives();
+            _MaxReceivables     = enterprise->GetMaxReceivables();
+            _CurrentLiability   = enterprise->GetCurrentLiability();
+            _DefferedIncome     = enterprise->GetDefferedIncome();
+            
+            
+        };
     };
     
     void CCoverageReservesRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _TurnaroundActives  = enterprise->GetTurnaroundActives();
+            _LongTermCommitment = enterprise->GetLongTermCommitment();
+            _CurrentLiability   = enterprise->GetCurrentLiability();
+            _DefferedIncome     = enterprise->GetDefferedIncome();
+            _Loans              = enterprise->GetLoans();
+            _Stocks             = enterprise->GetStocks();
+            
+            
+        };
     };
     
     void CFinancialDependenceRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _LongTermCommitment         = enterprise->GetLongTermCommitment();
+            _CurrentLiability           = enterprise->GetCurrentLiability();
+            _DefferedIncome             = enterprise->GetDefferedIncome();
+            _CapitalAndReserves         = enterprise->GetCapitalAndReserves();
+            _TargetFinancingAndReceipts = enterprise->GetTargetFinancingAndReceipts();
+            
+            
+        };
     };
     
     void COwnFundsAutonomyRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _DefferedIncome             = enterprise->GetDefferedIncome();
+            _CapitalAndReserves         = enterprise->GetCapitalAndReserves();
+            _TargetFinancingAndReceipts = enterprise->GetTargetFinancingAndReceipts();
+            _NonCurrentAssets           = enterprise->GetNonCurrentAssets();
+            _TurnaroundActives          = enterprise->GetTurnaroundActives();
+            
+            
+        };
     };
     
     void CStocksWorkingCapitalRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _DefferedIncome             = enterprise->GetDefferedIncome();
+            _CapitalAndReserves         = enterprise->GetCapitalAndReserves();
+            _TargetFinancingAndReceipts = enterprise->GetTargetFinancingAndReceipts();
+            _NonCurrentAssets           = enterprise->GetNonCurrentAssets();
+            _Stocks                     = enterprise->GetStocks();
+            
+            
+        };
     };
     
     void CConstantAssetRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _NonCurrentAssets           = enterprise->GetNonCurrentAssets();
+            _MaxReceivables             = enterprise->GetMaxReceivables();
+            _CapitalAndReserves         = enterprise->GetCapitalAndReserves();
+            _TargetFinancingAndReceipts = enterprise->GetTargetFinancingAndReceipts();
+            _DefferedIncome             = enterprise->GetDefferedIncome();
+            
+            
+        };
     };
     
     void CTurnoverAssetsRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
+            _Assets                 = enterprise->GetAssets();
+            
+            
+        };
     };
     
     void CTurnoverAccountsPayableRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
+            _BusinessExpenses       = enterprise->GetBusinessExpenses();
+            _ManagementCosts        = enterprise->GetManagementCosts();
+            _Payables               = enterprise->GetPayables();
+            
+            
+        };
     };
     
     void CTurnoverReceivablesRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
+            _MaxReceivables         = enterprise->GetMaxReceivables();
+            _MinReceivables         = enterprise->GetMinReceivables();
+            _DebtParticipants       = enterprise->GetDebtParticipants();
+            
+            
+        };
     };
     
     void CTurnoverStocksRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _CostOfGoodSold = enterprise->GetCostOfGoodSold();
+            _Stocks         = enterprise->GetStocks();
+            
+            
+        };
     };
     
     void COverallProfitabilityRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _ProfitBeforeTax = enterprise->GetProfitBeforeTax();
+            _IncomeTax = enterprise->GetIncomeTax();
+            _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
+            _NonOperatingIncome = enterprise->GetNonOperatingIncome();
+            
+            
+        };
     };
     
     void CReturnOnAssetsRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _NetProfit  = enterprise->GetNetProfit();
+            _Assets     = enterprise->GetAssets();
+            
+            
+        };
     };
     
     void CROERatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _NetProfit                  = enterprise->GetNetProfit();
+            _CapitalAndReserves         = enterprise->GetCapitalAndReserves();
+            _TargetFinancingAndReceipts = enterprise->GetTargetFinancingAndReceipts();
+            _DefferedIncome             = enterprise->GetDefferedIncome();
+            
+            
+        };
     };
     
     void CReturnOnSalesRatio::Update(CSubject* ASubject)
     {
+        CEnterprise* enterprise = dynamic_cast<CEnterprise*>(ASubject);
         
+        if(enterprise)
+        {
+            _ProfitOnSales          = enterprise->GetprofitOnSales();
+            _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
+            
+            
+        };
     };
 };
