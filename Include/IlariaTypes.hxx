@@ -16,7 +16,7 @@ namespace Ilaria
     
     E_RATIO_STATE GetState(real ARatio, real AFirst, real ASecond, real AThird, real AFourth, real AFifth, real ASixth)
     {
-        if (ARatio >= AFirst && ARatio < ASecond)
+        if (ARatio < ASecond)
             return ERS_VERY_LOW;
         else if (ARatio >= ASecond && ARatio < AThird)
             return ERS_LOW;

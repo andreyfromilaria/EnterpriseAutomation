@@ -2,186 +2,203 @@
 #define _RATIOS_H_
 
 #include "IlariaTypes.hxx"
-#include "IObserver.hxx"
+#include "CObserver.hxx"
 
 namespace Ilaria
 {
-    class IRatio : public CObserver
+    class CRatio : public CObserver
     {
+        protected:
+            real _Value;
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
         
         friend class CEnterprise;
     };
     
-    class ILiquidityAndSolvencyRatio : public IRatio
+    class CLiquidityAndSolvencyRatio : public CRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
         
             friend class CEnterprise;
     };
     
-    class ILiquidityAndSolvencyRatio : public IRatio
+    class CFinancialStabilityRatio : public CRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
         
             friend class CEnterprise;
     };
     
-    class IBusinessActivityRatio : public IRatio
+    class CBusinessActivityRatio : public CRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
         
             friend class CEnterprise;
     };
     
-    class IProfitabilityRatio : public IRatio
+    class CProfitabilityRatio : public CRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
         
             friend class CEnterprise;
     };
     
-    class CQuickRatio : public ILiquidityAndSolvencyRatio
+    class CQuickRatio : public CLiquidityAndSolvencyRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CCurrentLiquidityRatio : public ILiquidityAndSolvencyRatio
+    class CCurrentLiquidityRatio : public CLiquidityAndSolvencyRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CCoverageReservesRatio : public ILiquidityAndSolvencyRatio
+    class CCoverageReservesRatio : public CLiquidityAndSolvencyRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CFinancialDependenceRatio : public IFinancialStabilityRatio
+    class CFinancialDependenceRatio : public CFinancialStabilityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class COwnFundsAutonomyRatio : public IFinancialStabilityRatio
+    class COwnFundsAutonomyRatio : public CFinancialStabilityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CStocksWorkingCapitalRatio : public IFinancialStabilityRatio
+    class CStocksWorkingCapitalRatio : public CFinancialStabilityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CConstantAssetRatio : public IFinancialStabilityRatio
+    class CConstantAssetRatio : public CFinancialStabilityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CTurnoverAssetsRatio : public IBusinessActivityRatio
+    class CTurnoverAssetsRatio : public CBusinessActivityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CTurnoverAccountsPayableRatio : public IBusinessActivityRatio
+    class CTurnoverAccountsPayableRatio : public CBusinessActivityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CTurnoverReceivablesRatio : public IBusinessActivityRatio
+    class CTurnoverReceivablesRatio : public CBusinessActivityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CTurnoverStocksRatio : public IBusinessActivityRatio
+    class CTurnoverStocksRatio : public CBusinessActivityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class COverallprofitabilityRatio : public IProfitabilityRatio
+    class COverallProfitabilityRatio : public CProfitabilityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CReturnOnAssetsRatio : public IProfitabilityRatio
+    class CReturnOnAssetsRatio : public CProfitabilityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CROERatio : public IProfitabilityRatio
+    class CROERatio : public CProfitabilityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };
     
-    class CReturnOnSalesRatio : public IProfitabilityRatio
+    class CReturnOnSalesRatio : public CProfitabilityRatio
     {
         public:
-            virtual RatioType GetValue()     = 0;
+            virtual real GetValue()          = 0;
             virtual E_RATIO_STATE GetState() = 0;
+            virtual void Update();
         
             friend class CEnterprise;
     };

@@ -9,6 +9,7 @@ set(EA_SOURCES
 	Src/ExcelFormat.cxx
 	Src/CSubject.cxx
 	Src/CEnterprise.cxx
+	Src/Ratios.cxx
 )
 
 set(EA_HEADERS
