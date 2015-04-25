@@ -31,6 +31,7 @@ namespace Ilaria
         real _ProfitBeforeTax;
         real _IncomeTax;
         real _NonOperatingIncome;
+        real _NetProfit;
         real _UncoveredLoss;
         real _TotalAssets;
         real _Borrowings;
@@ -48,6 +49,7 @@ namespace Ilaria
         real _MostLiqilineAssets;
         real _NetLoss;
         real _Sales;
+        real _ProfitOnSales;
     public:
         real GetTurnaroundActives();
         real GetStocks();
@@ -71,6 +73,7 @@ namespace Ilaria
         real GetProfitBeforeTax();
         real GetIncomeTax();
         real GetNonOperatingIncome();
+        real GetNetProfit();
         real GetUncoveredLoss();
         real GetTotalAssets();
         real GetBorrowings();
@@ -88,6 +91,7 @@ namespace Ilaria
         real GetMostLiqilineAssets();
         real GetNetLoss();
         real GetSales();
+        real GetprofitOnSales();
 
         void SetTurnaroundActives(const real& AValue);
         void SetStocks(const real& AValue);
@@ -111,6 +115,7 @@ namespace Ilaria
         void SetProfitBeforeTax(const real& AValue);
         void SetIncomeTax(const real& AValue);
         void SetNonOperatingIncome(const real& AValue);
+        void SetNetProfit(const real& AValue);
         void SetUncoveredLoss(const real& AValue);
         void SetTotalAssets(const real& AValue);
         void SetBorrowings(const real& AValue);
@@ -128,6 +133,7 @@ namespace Ilaria
         void SetMostLiqilineAssets(const real& AValue);
         void SetNetLoss(const real& AValue);
         void SetSales(const real& AValue);
+        void SetProfitOnSales(const real& AValue);
     };
 };
 

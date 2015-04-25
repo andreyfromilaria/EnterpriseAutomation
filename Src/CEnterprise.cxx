@@ -112,6 +112,11 @@ namespace Ilaria
         return _NonOperatingIncome;
     };
     
+    real CEnterprise::GetNetProfit()
+    {
+        return _NetProfit;
+    };
+    
     real CEnterprise::GetUncoveredLoss()
     {
         return _UncoveredLoss;
@@ -195,6 +200,11 @@ namespace Ilaria
     real CEnterprise::GetSales()
     {
         return _Sales;
+    };
+    
+    real CEnterprise::GetprofitOnSales()
+    {
+        return _ProfitOnSales;
     };
 
     void CEnterprise::SetTurnaroundActives(const real& AValue)
@@ -307,6 +317,11 @@ namespace Ilaria
         _NonOperatingIncome = AValue;
     };
     
+    void CEnterprise::SetNetProfit(const real& AValue)
+    {
+        _NetProfit = AValue;
+    };
+    
     void CEnterprise::SetUncoveredLoss(const real& AValue)
     {
         _UncoveredLoss = AValue;
@@ -392,4 +407,8 @@ namespace Ilaria
         _Sales = AValue;
     };
     
+    void CEnterprise::SetProfitOnSales(const real& AValue)
+    {
+        _ProfitOnSales = AValue;
+    };
 };
