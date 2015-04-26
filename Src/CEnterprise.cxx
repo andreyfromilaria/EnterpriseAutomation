@@ -49,6 +49,11 @@ namespace Ilaria
         return _pRatioManager;
     };
     
+    CModelManager* CEnterprise::GetModelManager() const
+    {
+        return _pModelManager;
+    };
+    
     real CEnterprise::GetTurnaroundActives() const
     {
         return _TurnaroundActives;

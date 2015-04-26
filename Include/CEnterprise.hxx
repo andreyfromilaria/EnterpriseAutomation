@@ -66,6 +66,7 @@ namespace Ilaria
         ~CEnterprise();
         
         CRatioManager* GetRatioManager() const;
+        CModelManager* GetModelManager() const;
         
         real GetTurnaroundActives() const;
         real GetStocks() const;
