@@ -32,6 +32,17 @@ namespace Ilaria
         ERI_R3 = 13,
         ERI_R4 = 14
     };
+    
+    enum E_MODEL_ID
+    {
+        EMI_TF          = 15,
+        EMI_ALTMAN      = 16,
+        EMI_TAT         = 17,
+        EMI_R           = 18,
+        EMI_DA          = 19,
+        EMI_Z           = 20,
+        EMI_REGRESSION  = 21
+    };
 };
 
 #endif

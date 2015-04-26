@@ -48,8 +48,33 @@ namespace Ilaria
     
     class CDAModel : public CModel
     {
+    private:
+        real _KrizF;
+        real _KrizLP;
+        real _KrizR;
+        real _KrizA;
+        
+        real _NormF;
+        real _NormLP;
+        real _NormR;
+        real _NormA;
+        
+        real _Kriz;
+        real _Norm;
     public:
         CDAModel() {} ;
+        
+        real GetKrizF();
+        real GetNormF();
+        real GetKrizLP();
+        real GetNormLP();
+        real GetKrizR();
+        real GetNormR();
+        real GetKrizA();
+        real GetNormA();
+        
+        real GetKriz();
+        real GetNorm();
         
         virtual void Update(CSubject* ASubject);
     };

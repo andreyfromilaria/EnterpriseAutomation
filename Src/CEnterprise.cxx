@@ -263,6 +263,26 @@ namespace Ilaria
         return _CostOfProductionAndSales;
     };
     
+    real CEnterprise::GetAssetsPreviousYear() const
+    {
+        return _AssetsPreviousYear;
+    };
+    
+    real CEnterprise::GetRevenueFromSaleOfGoodsPreviousYear() const
+    {
+        return _RevenueFromSaleOfGoodsPreviousYear;
+    };
+    
+    void CEnterprise::SetAssetsPreviousYear(const real& AValue)
+    {
+        _AssetsPreviousYear = AValue;
+    };
+    
+    void CEnterprise::SetRevenueFromSaleOfGoodsPreviousYear(const real& AValue)
+    {
+        _RevenueFromSaleOfGoodsPreviousYear = AValue;
+    };
+    
     void CEnterprise::SetCostOfProductionAndSales(const real& AValue)
     {
         _CostOfProductionAndSales = AValue;

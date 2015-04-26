@@ -55,6 +55,8 @@ namespace Ilaria
         real _Sales;
         real _ProfitOnSales;
         real _CostOfProductionAndSales;
+        real _AssetsPreviousYear;
+        real _RevenueFromSaleOfGoodsPreviousYear;
     public:
         CEnterprise();
         explicit CEnterprise(CRatioManager* AManager);
@@ -107,7 +109,11 @@ namespace Ilaria
         real GetSales() const;
         real GetprofitOnSales() const;
         real GetCostOfProductionAndSales() const;
+        real GetAssetsPreviousYear() const;
+        real GetRevenueFromSaleOfGoodsPreviousYear() const;
 
+        void SetAssetsPreviousYear(const real& AValue);
+        void SetRevenueFromSaleOfGoodsPreviousYear(const real& AValue);
         void SetCostOfProductionAndSales(const real& AValue);
         void SetTurnaroundActives(const real& AValue);
         void SetStocks(const real& AValue);
