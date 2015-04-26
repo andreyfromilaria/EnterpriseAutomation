@@ -3,5 +3,6 @@
 
 #include <string>
 #include "ExcelFormat.hxx"
+#include "CEnterprise.hxx"
 
 #endif

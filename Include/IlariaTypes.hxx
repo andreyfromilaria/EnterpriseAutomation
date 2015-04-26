@@ -14,18 +14,23 @@ namespace Ilaria
         ERS_VERY_HIGH   = 4,
     };
     
-    E_RATIO_STATE GetState(real ARatio, real AFirst, real ASecond, real AThird, real AFourth, real AFifth, real ASixth)
+    enum E_RATIO_ID
     {
-        if (ARatio < ASecond)
-            return ERS_VERY_LOW;
-        else if (ARatio >= ASecond && ARatio < AThird)
-            return ERS_LOW;
-        else if (ARatio >= AThird && ARatio < AFourth)
-            return ERS_MIDDLE;
-        else if (ARatio >= AFourth && ARatio < AFifth)
-            return ERS_HIGH;
-        
-        return ERS_VERY_HIGH;
+        ERI_L1 = 0,
+        ERI_P1 = 1,
+        ERI_L3 = 2,
+        ERI_F1 = 3,
+        ERI_F2 = 4,
+        ERI_F3 = 5,
+        ERI_F4 = 6,
+        ERI_A2 = 7,
+        ERI_A4 = 8,
+        ERI_A5 = 9,
+        ERI_A6 = 10,
+        ERI_R1 = 11,
+        ERI_R2 = 12,
+        ERI_R3 = 13,
+        ERI_R4 = 14
     };
 };
 

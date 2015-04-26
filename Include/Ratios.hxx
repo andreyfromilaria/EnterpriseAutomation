@@ -11,8 +11,13 @@ namespace Ilaria
     protected:
         real _Value;
     public:
-        virtual real GetValue()          = 0;
+        CRatio() {} ;
+
+        virtual real GetValue() const    = 0;
         virtual E_RATIO_STATE GetState() = 0;
+        
+        
+        E_RATIO_STATE GetState(real ARatio, real AFirst, real ASecond, real AThird, real AFourth, real AFifth, real ASixth);
         
         friend class CEnterprise;
     };
@@ -20,7 +25,9 @@ namespace Ilaria
     class CLiquidityAndSolvencyRatio : public CRatio
     {
     public:
-        virtual real GetValue()          = 0;
+        CLiquidityAndSolvencyRatio() {} ;
+        
+        virtual real GetValue() const    = 0;
         virtual E_RATIO_STATE GetState() = 0;
         
         friend class CEnterprise;
@@ -29,7 +36,9 @@ namespace Ilaria
     class CFinancialStabilityRatio : public CRatio
     {
     public:
-        virtual real GetValue()          = 0;
+        CFinancialStabilityRatio() {} ;
+
+        virtual real GetValue() const    = 0;
         virtual E_RATIO_STATE GetState() = 0;
         
         friend class CEnterprise;
@@ -38,7 +47,9 @@ namespace Ilaria
     class CBusinessActivityRatio : public CRatio
     {
     public:
-        virtual real GetValue()          = 0;
+        CBusinessActivityRatio() {} ;
+
+        virtual real GetValue() const    = 0;
         virtual E_RATIO_STATE GetState() = 0;
         
         friend class CEnterprise;
@@ -47,7 +58,9 @@ namespace Ilaria
     class CProfitabilityRatio : public CRatio
     {
     public:
-        virtual real GetValue()          = 0;
+        CProfitabilityRatio() {} ;
+
+        virtual real GetValue() const    = 0;
         virtual E_RATIO_STATE GetState() = 0;
         
         friend class CEnterprise;
@@ -63,8 +76,10 @@ namespace Ilaria
         real _CurrentLiability;
         real _DefferedIncome;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CQuickRatio() {} ;
+        
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
         
         friend class CEnterprise;
@@ -78,8 +93,10 @@ namespace Ilaria
         real _CurrentLiability;
         real _DefferedIncome;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CCurrentLiquidityRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
         
         friend class CEnterprise;
@@ -95,8 +112,10 @@ namespace Ilaria
         real _Loans;
         real _Stocks;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CCoverageReservesRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
         
         friend class CEnterprise;
@@ -111,8 +130,10 @@ namespace Ilaria
         real _CapitalAndReserves;
         real _TargetFinancingAndReceipts;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CFinancialDependenceRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
         
         friend class CEnterprise;
@@ -127,8 +148,10 @@ namespace Ilaria
         real _NonCurrentAssets;
         real _TurnaroundActives;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        COwnFundsAutonomyRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -143,8 +166,10 @@ namespace Ilaria
         real _NonCurrentAssets;
         real _Stocks;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CStocksWorkingCapitalRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -159,8 +184,10 @@ namespace Ilaria
         real _TargetFinancingAndReceipts;
         real _DefferedIncome;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CConstantAssetRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -172,8 +199,10 @@ namespace Ilaria
         real _RevenueFromSaleOfGoods;
         real _Assets;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CTurnoverAssetsRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -187,8 +216,10 @@ namespace Ilaria
         real _ManagementCosts;
         real _Payables;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CTurnoverAccountsPayableRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -202,8 +233,10 @@ namespace Ilaria
         real _MinReceivables;
         real _DebtParticipants;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CTurnoverReceivablesRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -215,8 +248,10 @@ namespace Ilaria
         real _CostOfGoodSold;
         real _Stocks;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CTurnoverStocksRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -230,8 +265,10 @@ namespace Ilaria
         real _RevenueFromSaleOfGoods;
         real _NonOperatingIncome;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        COverallProfitabilityRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -243,8 +280,10 @@ namespace Ilaria
         real _NetProfit;
         real _Assets;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CReturnOnAssetsRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -258,8 +297,10 @@ namespace Ilaria
         real _TargetFinancingAndReceipts;
         real _DefferedIncome;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CROERatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;
@@ -271,8 +312,10 @@ namespace Ilaria
         real _ProfitOnSales;
         real _RevenueFromSaleOfGoods;
     public:
-        virtual real GetValue()          = 0;
-        virtual E_RATIO_STATE GetState() = 0;
+        CReturnOnSalesRatio() {} ;
+
+        virtual real GetValue() const;
+        virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
     
         friend class CEnterprise;

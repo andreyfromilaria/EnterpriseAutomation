@@ -1,5 +1,5 @@
-#ifndef BASICEXCEL_HPP
-#define BASICEXCEL_HPP
+#ifndef _BASICEXCEL_H_
+#define _BASICEXCEL_H_
 
 //MF
 #if defined(_MSC_VER) && _MSC_VER<=1200 // VC++ 6.0

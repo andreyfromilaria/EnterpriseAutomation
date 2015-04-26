@@ -2,7 +2,6 @@
 
 using namespace Ilaria;
 
-const int FW_BOLD   = 700;
 const int ROWS      = 10;
 const int COLUMNS   = 10;
 
@@ -79,7 +78,7 @@ void LiteExample(std::string AFileName)
     TExcelFont* fontBold         = new TExcelFont();
     TCellFormat* formatBold      = new TCellFormat(*manager);
     
-    fontBold->SetWeight(FW_BOLD);
+    fontBold->SetWeight(700);
     formatBold->SetFont(*fontBold);
     
     int row = 0;
@@ -100,7 +99,7 @@ void LiteExample(std::string AFileName)
     
     TExcelFont* fontRedBold = new TExcelFont();
     
-    fontRedBold->SetWeight(FW_BOLD);
+    fontRedBold->SetWeight(700);
     fontRedBold->SetColorIndex(EGA_YELLOW);
     
     TCellFormat* formatRedBold = new TCellFormat(*manager, *fontRedBold);
@@ -135,7 +134,27 @@ void LiteExample(std::string AFileName)
 
 int main(int argc, const char * argv[])
 {
-    NiceExample("NiceExample.xls");
-    LiteExample("LiteExample.xls");
+    CEnterprise* enterprise = new CEnterprise();
+    
+    CRatio* ratio = enterprise->GetRatioManager()->GetRatioById(ERI_L1);
+    
+    std::cout << ratio->GetValue() << std::endl;
+    
+    enterprise->SetTurnaroundActives(200);
+    enterprise->SetValueAddedTax(2387);
+    enterprise->SetMaxReceivables(23987);
+    enterprise->SetCurrentLiability(448);
+    enterprise->SetDefferedIncome(284);
+    
+    std::cout << ratio->GetValue() << std::endl;
+    
+    enterprise->SetTurnaroundActives(203450);
+    enterprise->SetValueAddedTax(23234587);
+    enterprise->SetMaxReceivables(23235987);
+    enterprise->SetCurrentLiability(4423458);
+    enterprise->SetDefferedIncome(283454);
+    
+    std::cout << ratio->GetValue() << std::endl;
+    
     return 0;
 }

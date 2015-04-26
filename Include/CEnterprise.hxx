@@ -2,13 +2,15 @@
 #define _ENTERPRISE_H_
 
 #include "CSubject.hxx"
-#include "IlariaTypes.hxx"
+#include "CRatioManager.hxx"
 
 namespace Ilaria
 {
     class CEnterprise : public CSubject
     {
     private:
+        CRatioManager* _pManager;
+        
         real _TurnaroundActives;
         real _Stocks;
         real _ValueAddedTax;
@@ -53,49 +55,56 @@ namespace Ilaria
         real _Sales;
         real _ProfitOnSales;
     public:
-        real GetTurnaroundActives();
-        real GetStocks();
-        real GetValueAddedTax();
-        real GetReceivables();
-        real GetMaxReceivables();
-        real GetMinReceivables();
-        real GetCurrentLiability();
-        real GetDefferedIncome();
-        real GetLongTermCommitment();
-        real GetLoans();
-        real GetCapitalAndReserves();
-        real GetTargetFinancingAndReceipts();
-        real GetNonCurrentAssets();
-        real GetCurrentAssets();
-        real GetRevenueFromSaleOfGoods();
-        real GetBusinessExpenses();
-        real GetAssets();
-        real GetManagementCosts();
-        real GetPayables();
-        real GetDebtParticipants();
-        real GetCostOfGoodSold();
-        real GetProfitBeforeTax();
-        real GetIncomeTax();
-        real GetNonOperatingIncome();
-        real GetNetProfit();
-        real GetUncoveredLoss();
-        real GetTotalAssets();
-        real GetBorrowings();
-        real GetTotalLiabilities();
-        real GetNetWorkingCapital();
-        real GetInterestPayable();
-        real GetMarketValueOfEquity();
-        real GetCostTotalDebt();
-        real GetTangibleAssets();
-        real GetShortTermliabilities();
-        real GetOperatingAssets();
-        real GetOperatingExpenses();
-        real GetNetProfitOfTheReportingPeriod();
-        real GetEquity();
-        real GetMostLiqilineAssets();
-        real GetNetLoss();
-        real GetSales();
-        real GetprofitOnSales();
+        CEnterprise();
+        explicit CEnterprise(CRatioManager* AManager);
+        
+        ~CEnterprise();
+        
+        CRatioManager* GetRatioManager() const;
+        
+        real GetTurnaroundActives() const;
+        real GetStocks() const;
+        real GetValueAddedTax() const;
+        real GetReceivables() const;
+        real GetMaxReceivables() const;
+        real GetMinReceivables() const;
+        real GetCurrentLiability() const;
+        real GetDefferedIncome() const;
+        real GetLongTermCommitment() const;
+        real GetLoans() const;
+        real GetCapitalAndReserves() const;
+        real GetTargetFinancingAndReceipts() const;
+        real GetNonCurrentAssets() const;
+        real GetCurrentAssets() const;
+        real GetRevenueFromSaleOfGoods() const;
+        real GetBusinessExpenses() const;
+        real GetAssets() const;
+        real GetManagementCosts() const;
+        real GetPayables() const;
+        real GetDebtParticipants() const;
+        real GetCostOfGoodSold() const;
+        real GetProfitBeforeTax() const;
+        real GetIncomeTax() const;
+        real GetNonOperatingIncome() const;
+        real GetNetProfit() const;
+        real GetUncoveredLoss() const;
+        real GetTotalAssets() const;
+        real GetBorrowings() const;
+        real GetTotalLiabilities() const;
+        real GetNetWorkingCapital() const;
+        real GetInterestPayable() const;
+        real GetMarketValueOfEquity() const;
+        real GetCostTotalDebt() const;
+        real GetTangibleAssets() const;
+        real GetShortTermliabilities() const;
+        real GetOperatingAssets() const;
+        real GetOperatingExpenses() const;
+        real GetNetProfitOfTheReportingPeriod() const;
+        real GetEquity() const;
+        real GetMostLiqilineAssets() const;
+        real GetNetLoss() const;
+        real GetSales() const;
+        real GetprofitOnSales() const;
 
         void SetTurnaroundActives(const real& AValue);
         void SetStocks(const real& AValue);

@@ -1,5 +1,5 @@
-#ifndef EXCELFORMAT_H
-#define EXCELFORMAT_H
+#ifndef _EXCELFORMAT_H_
+#define _EXCELFORMAT_H_
 
 #include "BasicExcel.hxx"
 
