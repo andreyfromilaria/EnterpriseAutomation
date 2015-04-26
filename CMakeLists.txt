@@ -11,6 +11,7 @@ set(EA_SOURCES
 	Src/CEnterprise.cxx
 	Src/Ratios.cxx
 	Src/CRatioManager.cxx
+	Src/Models.cxx
 )
 
 set(EA_HEADERS
@@ -22,7 +23,8 @@ set(EA_HEADERS
 	Include/CSubject.hxx
 	Include/IlariaTypes.hxx
 	Include/Ratios.hxx
-	include/CRatioManager.hxx
+	Include/CRatioManager.hxx
+	Include/Models.hxx
 )
 
 set(EA_INCLUDE_DIRS 

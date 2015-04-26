@@ -257,6 +257,16 @@ namespace Ilaria
     {
         return _ProfitOnSales;
     };
+    
+    real CEnterprise::GetCostOfProductionAndSales() const
+    {
+        return _CostOfProductionAndSales;
+    };
+    
+    void CEnterprise::SetCostOfProductionAndSales(const real& AValue)
+    {
+        _CostOfProductionAndSales = AValue;
+    };
 
     void CEnterprise::SetTurnaroundActives(const real& AValue)
     {
