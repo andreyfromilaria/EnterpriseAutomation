@@ -166,7 +166,7 @@ namespace Ilaria
             _CurrentLiability   = enterprise->GetCurrentLiability();
             _DefferedIncome     = enterprise->GetDefferedIncome();
             
-            
+            _Value = (_TurnaroundActives - _Stocks - _ValueAddedTax - _MaxReceivables) / (_CurrentLiability - _DefferedIncome);
         };
     };
     
@@ -181,7 +181,7 @@ namespace Ilaria
             _CurrentLiability   = enterprise->GetCurrentLiability();
             _DefferedIncome     = enterprise->GetDefferedIncome();
             
-            
+            _Value = (_TurnaroundActives - _MaxReceivables) / (_CurrentLiability - _DefferedIncome);
         };
     };
     
@@ -198,7 +198,7 @@ namespace Ilaria
             _Loans              = enterprise->GetLoans();
             _Stocks             = enterprise->GetStocks();
             
-            
+            _Value = ((_TurnaroundActives - _LongTermCommitment - _CurrentLiability + _DefferedIncome + _Loans) / _Stocks) * 100;
         };
     };
     
@@ -214,7 +214,7 @@ namespace Ilaria
             _CapitalAndReserves         = enterprise->GetCapitalAndReserves();
             _TargetFinancingAndReceipts = enterprise->GetTargetFinancingAndReceipts();
             
-            
+            _Value = (_LongTermCommitment + _CurrentLiability - _DefferedIncome) / (_CapitalAndReserves - _TargetFinancingAndReceipts + _DefferedIncome);
         };
     };
     
@@ -230,7 +230,7 @@ namespace Ilaria
             _NonCurrentAssets           = enterprise->GetNonCurrentAssets();
             _TurnaroundActives          = enterprise->GetTurnaroundActives();
             
-            
+            _Value = (_CapitalAndReserves - _TargetFinancingAndReceipts + _DefferedIncome) / (_NonCurrentAssets + _TurnaroundActives);
         };
     };
     
@@ -246,7 +246,7 @@ namespace Ilaria
             _NonCurrentAssets           = enterprise->GetNonCurrentAssets();
             _Stocks                     = enterprise->GetStocks();
             
-            
+            _Value = (_CapitalAndReserves - _TargetFinancingAndReceipts + _DefferedIncome  - _NonCurrentAssets) / _Stocks;
         };
     };
     
@@ -262,7 +262,7 @@ namespace Ilaria
             _TargetFinancingAndReceipts = enterprise->GetTargetFinancingAndReceipts();
             _DefferedIncome             = enterprise->GetDefferedIncome();
             
-            
+            _Value = (_NonCurrentAssets + _MaxReceivables) / (_CapitalAndReserves - _TargetFinancingAndReceipts + _DefferedIncome);
         };
     };
     
@@ -275,7 +275,7 @@ namespace Ilaria
             _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
             _Assets                 = enterprise->GetAssets();
             
-            
+            _Value = _RevenueFromSaleOfGoods / _Assets;
         };
     };
     
@@ -290,7 +290,7 @@ namespace Ilaria
             _ManagementCosts        = enterprise->GetManagementCosts();
             _Payables               = enterprise->GetPayables();
             
-            
+            _Value = (_RevenueFromSaleOfGoods - _BusinessExpenses - _ManagementCosts) / _Payables;
         };
     };
     
@@ -305,7 +305,7 @@ namespace Ilaria
             _MinReceivables         = enterprise->GetMinReceivables();
             _DebtParticipants       = enterprise->GetDebtParticipants();
             
-            
+            _Value = _RevenueFromSaleOfGoods / (_MaxReceivables + _MinReceivables - _DebtParticipants);
         };
     };
     
@@ -318,7 +318,7 @@ namespace Ilaria
             _CostOfGoodSold = enterprise->GetCostOfGoodSold();
             _Stocks         = enterprise->GetStocks();
             
-            
+            _Value = _CostOfGoodSold / _Stocks;
         };
     };
     
@@ -328,12 +328,12 @@ namespace Ilaria
         
         if(enterprise)
         {
-            _ProfitBeforeTax = enterprise->GetProfitBeforeTax();
-            _IncomeTax = enterprise->GetIncomeTax();
+            _ProfitBeforeTax        = enterprise->GetProfitBeforeTax();
+            _IncomeTax              = enterprise->GetIncomeTax();
             _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
-            _NonOperatingIncome = enterprise->GetNonOperatingIncome();
+            _NonOperatingIncome     = enterprise->GetNonOperatingIncome();
             
-            
+            _Value = (_ProfitBeforeTax - _IncomeTax) / (_RevenueFromSaleOfGoods + _NonOperatingIncome);
         };
     };
     
@@ -346,7 +346,7 @@ namespace Ilaria
             _NetProfit  = enterprise->GetNetProfit();
             _Assets     = enterprise->GetAssets();
             
-            
+            _Value = _NetProfit / _Assets;
         };
     };
     
@@ -361,7 +361,7 @@ namespace Ilaria
             _TargetFinancingAndReceipts = enterprise->GetTargetFinancingAndReceipts();
             _DefferedIncome             = enterprise->GetDefferedIncome();
             
-            
+            _Value = _NetProfit / (_CapitalAndReserves - _TargetFinancingAndReceipts + _DefferedIncome);
         };
     };
     
@@ -374,7 +374,7 @@ namespace Ilaria
             _ProfitOnSales          = enterprise->GetprofitOnSales();
             _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
             
-            
+            _Value = _ProfitOnSales / _RevenueFromSaleOfGoods;
         };
     };
 };
