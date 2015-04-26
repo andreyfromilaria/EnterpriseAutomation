@@ -3,13 +3,15 @@
 
 #include "CSubject.hxx"
 #include "CRatioManager.hxx"
+#include "CModelManager.hxx"
 
 namespace Ilaria
 {
     class CEnterprise : public CSubject
     {
     private:
-        CRatioManager* _pManager;
+        CRatioManager* _pRatioManager;
+        CModelManager* _pModelManager;
         
         real _TurnaroundActives;
         real _Stocks;
@@ -59,7 +61,7 @@ namespace Ilaria
         real _RevenueFromSaleOfGoodsPreviousYear;
     public:
         CEnterprise();
-        explicit CEnterprise(CRatioManager* AManager);
+        explicit CEnterprise(CRatioManager* ARatioManager, CModelManager* AModelManager);
         
         ~CEnterprise();
         

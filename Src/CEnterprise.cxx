@@ -13,34 +13,40 @@ namespace Ilaria
     
     CEnterprise::~CEnterprise()
     {
-        if (_pManager)
-            delete _pManager;
+        if (_pRatioManager)
+            delete _pRatioManager;
         
+        if (_pModelManager)
+            delete _pModelManager;
     };
     
     CEnterprise::CEnterprise()
     {
-        _pManager = new CRatioManager();
+        _pRatioManager = new CRatioManager();
+        _pModelManager = new CModelManager();
         
-        for (auto ratio : _pManager->GetRatios())
-        {
+        for (auto ratio : _pRatioManager->GetRatios())
             this->AddObserver(ratio.second);
-        };
+            
+        for (auto model : _pModelManager->GetModels())
+            this->AddObserver(model.second);
     };
     
-    CEnterprise::CEnterprise(CRatioManager* AManager)
+    CEnterprise::CEnterprise(CRatioManager* ARatioManager, CModelManager* AModelManager)
     {
-        _pManager = AManager;
+        _pRatioManager = ARatioManager;
+        _pModelManager = AModelManager;
         
-        for (auto ratio : _pManager->GetRatios())
-        {
-            this->AddObserver(ratio.second);
-        };
+        for (auto ratio : _pRatioManager->GetRatios())
+             this->AddObserver(ratio.second);
+        
+        for (auto model : _pModelManager->GetModels())
+            this->AddObserver(model.second);
     };
     
     CRatioManager* CEnterprise::GetRatioManager() const
     {
-        return _pManager;
+        return _pRatioManager;
     };
     
     real CEnterprise::GetTurnaroundActives() const

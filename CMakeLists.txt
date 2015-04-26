@@ -12,6 +12,7 @@ set(EA_SOURCES
 	Src/Ratios.cxx
 	Src/CRatioManager.cxx
 	Src/Models.cxx
+	Src/CModelManager.cxx
 )
 
 set(EA_HEADERS
@@ -25,6 +26,7 @@ set(EA_HEADERS
 	Include/Ratios.hxx
 	Include/CRatioManager.hxx
 	Include/Models.hxx
+	Include/CModelManager.hxx
 )
 
 set(EA_INCLUDE_DIRS 

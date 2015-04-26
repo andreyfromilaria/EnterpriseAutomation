@@ -14,10 +14,7 @@ namespace Ilaria
     
     CRatio* CRatioManager::GetRatioById(E_RATIO_ID Id)
     {
-        if (_mRatios[Id])
-            return _mRatios[Id];
-        
-        return nullptr;
+        return _mRatios[Id];
     };
     
     std::map<E_RATIO_ID, CRatio*> CRatioManager::GetRatios() const
