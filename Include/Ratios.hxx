@@ -277,6 +277,25 @@ namespace Ilaria
     
         friend class CEnterprise;
     };
+    
+    typedef CQuickRatio                     L1;
+    typedef CCurrentLiquidityRatio          P1;
+    typedef CCoverageReservesRatio          L3;
+    
+    typedef CFinancialDependenceRatio       F1;
+    typedef COwnFundsAutonomyRatio          F2;
+    typedef CStocksWorkingCapitalRatio      F3;
+    typedef CConstantAssetRatio             F4;
+    
+    typedef CTurnoverAssetsRatio            A2;
+    typedef CTurnoverAccountsPayableRatio   A4;
+    typedef CTurnoverReceivablesRatio       A5;
+    typedef CTurnoverStocksRatio            A6;
+    
+    typedef COverallProfitabilityRatio      R1;
+    typedef CReturnOnAssetsRatio            R2;
+    typedef CROERatio                       R3;
+    typedef CReturnOnSalesRatio             R4;
 };
 
 #endif
