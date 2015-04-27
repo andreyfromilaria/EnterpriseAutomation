@@ -2,7 +2,8 @@
 #define _ILARIA_H_
 
 #include <string>
-#include "ExcelFormat.hxx"
+#include <iostream>
 #include "CEnterprise.hxx"
+#include "CPracticeDecoder.hxx"
 
 #endif

@@ -1,4 +1,5 @@
 #include "CRatioManager.hxx"
+#include <iostream>
 
 namespace Ilaria
 {
@@ -42,5 +43,37 @@ namespace Ilaria
         _mRatios[ERI_R2] = new CReturnOnAssetsRatio();
         _mRatios[ERI_R3] = new CROERatio();
         _mRatios[ERI_R4] = new CReturnOnSalesRatio();
+    };
+    
+    std::ostream& operator << (std::ostream& out, CRatioManager manager)
+    {
+        out << "L1 = " << manager.GetRatioById(ERI_L1)->GetValue() << std::endl;
+        out << "P1 = " << manager.GetRatioById(ERI_P1)->GetValue() << std::endl;
+        out << "L3 = " << manager.GetRatioById(ERI_L3)->GetValue() << std::endl;
+        
+        out << '\n';
+        
+        out << "F1 = " << manager.GetRatioById(ERI_F1)->GetValue() << std::endl;
+        out << "F2 = " << manager.GetRatioById(ERI_F2)->GetValue() << std::endl;
+        out << "F3 = " << manager.GetRatioById(ERI_F3)->GetValue() << std::endl;
+        out << "F4 = " << manager.GetRatioById(ERI_F4)->GetValue() << std::endl;
+        
+        out << '\n';
+        
+        out << "A2 = " << manager.GetRatioById(ERI_A2)->GetValue() << std::endl;
+        out << "A4 = " << manager.GetRatioById(ERI_A4)->GetValue() << std::endl;
+        out << "A5 = " << manager.GetRatioById(ERI_A5)->GetValue() << std::endl;
+        out << "A6 = " << manager.GetRatioById(ERI_A6)->GetValue() << std::endl;
+        
+        out << '\n';
+        
+        out << "R1 = " << manager.GetRatioById(ERI_R1)->GetValue() << std::endl;
+        out << "R2 = " << manager.GetRatioById(ERI_R2)->GetValue() << std::endl;
+        out << "R3 = " << manager.GetRatioById(ERI_R3)->GetValue() << std::endl;
+        out << "R4 = " << manager.GetRatioById(ERI_R4)->GetValue() << std::endl;
+        
+        out << '\n';
+        
+        return out;
     };
 };

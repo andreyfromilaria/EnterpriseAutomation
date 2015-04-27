@@ -79,7 +79,7 @@ namespace Ilaria
         {
             real TA = enterprise->GetTurnaroundActives();
             real A = enterprise->GetAssets();
-            real NPRP = enterprise->GetNetProfitOfTheReportingPeriod();
+            real NPRP = enterprise->GetNetProfit();
             real E = enterprise->GetEquity();
             real RFSG = enterprise->GetRevenueFromSaleOfGoods();
             real CPS = enterprise->GetCostOfProductionAndSales();

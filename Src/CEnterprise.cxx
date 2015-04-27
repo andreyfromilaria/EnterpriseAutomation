@@ -74,16 +74,6 @@ namespace Ilaria
         return _Receivables;
     };
     
-    real CEnterprise::GetMaxReceivables() const
-    {
-        return _MaxReceivables;
-    };
-    
-    real CEnterprise::GetMinReceivables() const
-    {
-        return _MinReceivables;
-    };
-    
     real CEnterprise::GetCurrentLiability() const
     {
         return _CurrentLiability;
@@ -117,11 +107,6 @@ namespace Ilaria
     real CEnterprise::GetNonCurrentAssets() const
     {
         return _NonCurrentAssets;
-    };
-    
-    real CEnterprise::GetCurrentAssets() const
-    {
-        return _CurrentAssets;
     };
     
     real CEnterprise::GetRevenueFromSaleOfGoods() const
@@ -239,11 +224,6 @@ namespace Ilaria
         return _OperatingExpenses;
     };
     
-    real CEnterprise::GetNetProfitOfTheReportingPeriod() const
-    {
-        return _NetProfitOfTheReportingPeriod;
-    };
-    
     real CEnterprise::GetEquity() const
     {
         return _Equity;
@@ -264,7 +244,7 @@ namespace Ilaria
         return _Sales;
     };
     
-    real CEnterprise::GetprofitOnSales() const
+    real CEnterprise::GetProfitOnSales() const
     {
         return _ProfitOnSales;
     };
@@ -323,18 +303,6 @@ namespace Ilaria
         this->Notify();
     };
     
-    void CEnterprise::SetMaxReceivables(const real& AValue)
-    {
-        _MaxReceivables = AValue;
-        this->Notify();
-    };
-    
-    void CEnterprise::SetMinReceivables(const real& AValue)
-    {
-        _MinReceivables = AValue;
-        this->Notify();
-    };
-    
     void CEnterprise::SetCurrentLiability(const real& AValue)
     {
         _CurrentLiability = AValue;
@@ -374,12 +342,6 @@ namespace Ilaria
     void CEnterprise::SetNonCurrentAssets(const real& AValue)
     {
         _NonCurrentAssets = AValue;
-        this->Notify();
-    };
-    
-    void CEnterprise::SetCurrentAssets(const real& AValue)
-    {
-        _CurrentAssets = AValue;
         this->Notify();
     };
     
@@ -518,12 +480,6 @@ namespace Ilaria
     void CEnterprise::SetOperatingExpenses(const real& AValue)
     {
         _OperatingExpenses = AValue;
-        this->Notify();
-    };
-    
-    void CEnterprise::SetNetProfitOfTheReportingPeriod(const real& AValue)
-    {
-        _NetProfitOfTheReportingPeriod = AValue;
         this->Notify();
     };
     

@@ -106,11 +106,11 @@ namespace Ilaria
             real _TurnaroundActives  = enterprise->GetTurnaroundActives();
             real _Stocks             = enterprise->GetStocks();
             real _ValueAddedTax      = enterprise->GetValueAddedTax();
-            real _MaxReceivables     = enterprise->GetMaxReceivables();
+            real _Receivables        = enterprise->GetReceivables();
             real _CurrentLiability   = enterprise->GetCurrentLiability();
             real _DefferedIncome     = enterprise->GetDefferedIncome();
             
-            _Value = (_TurnaroundActives - _Stocks - _ValueAddedTax - _MaxReceivables) / (_CurrentLiability - _DefferedIncome);
+            _Value = (_TurnaroundActives - _Stocks - _ValueAddedTax - _Receivables) / (_CurrentLiability - _DefferedIncome);
         };
     };
     
@@ -121,7 +121,7 @@ namespace Ilaria
         if(enterprise)
         {
             real _TurnaroundActives  = enterprise->GetTurnaroundActives();
-            real _MaxReceivables     = enterprise->GetMaxReceivables();
+            real _MaxReceivables     = enterprise->GetReceivables();
             real _CurrentLiability   = enterprise->GetCurrentLiability();
             real _DefferedIncome     = enterprise->GetDefferedIncome();
             
@@ -142,7 +142,7 @@ namespace Ilaria
             real _Loans              = enterprise->GetLoans();
             real _Stocks             = enterprise->GetStocks();
             
-            _Value = ((_TurnaroundActives - _LongTermCommitment - _CurrentLiability + _DefferedIncome + _Loans) / _Stocks) * 100;
+            _Value = ((_TurnaroundActives - _LongTermCommitment - _CurrentLiability + _DefferedIncome + _Loans) / _Stocks);
         };
     };
     
@@ -201,7 +201,7 @@ namespace Ilaria
         if(enterprise)
         {
             real _NonCurrentAssets           = enterprise->GetNonCurrentAssets();
-            real _MaxReceivables             = enterprise->GetMaxReceivables();
+            real _MaxReceivables             = enterprise->GetReceivables();
             real _CapitalAndReserves         = enterprise->GetCapitalAndReserves();
             real _TargetFinancingAndReceipts = enterprise->GetTargetFinancingAndReceipts();
             real _DefferedIncome             = enterprise->GetDefferedIncome();
@@ -245,11 +245,10 @@ namespace Ilaria
         if(enterprise)
         {
             real _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
-            real _MaxReceivables         = enterprise->GetMaxReceivables();
-            real _MinReceivables         = enterprise->GetMinReceivables();
+            real _Receivables            = enterprise->GetReceivables();
             real _DebtParticipants       = enterprise->GetDebtParticipants();
             
-            _Value = _RevenueFromSaleOfGoods / (_MaxReceivables + _MinReceivables - _DebtParticipants);
+            _Value = _RevenueFromSaleOfGoods / (_Receivables - _DebtParticipants);
         };
     };
     
@@ -272,12 +271,12 @@ namespace Ilaria
         
         if(enterprise)
         {
-            real _ProfitBeforeTax        = enterprise->GetProfitBeforeTax();
+            real _ProfitOnSales          = enterprise->GetProfitOnSales();
             real _IncomeTax              = enterprise->GetIncomeTax();
             real _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
             real _NonOperatingIncome     = enterprise->GetNonOperatingIncome();
             
-            _Value = (_ProfitBeforeTax - _IncomeTax) / (_RevenueFromSaleOfGoods + _NonOperatingIncome);
+            _Value = (_ProfitOnSales - _IncomeTax) / (_RevenueFromSaleOfGoods + _NonOperatingIncome);
         };
     };
     
@@ -315,7 +314,7 @@ namespace Ilaria
         
         if(enterprise)
         {
-            real _ProfitOnSales          = enterprise->GetprofitOnSales();
+            real _ProfitOnSales          = enterprise->GetProfitOnSales();
             real _RevenueFromSaleOfGoods = enterprise->GetRevenueFromSaleOfGoods();
             
             _Value = _ProfitOnSales / _RevenueFromSaleOfGoods;

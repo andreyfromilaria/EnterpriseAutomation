@@ -17,8 +17,6 @@ namespace Ilaria
         real _Stocks;
         real _ValueAddedTax;
         real _Receivables;
-        real _MaxReceivables;
-        real _MinReceivables;
         real _CurrentLiability;
         real _DefferedIncome;
         real _LongTermCommitment;
@@ -26,7 +24,6 @@ namespace Ilaria
         real _CapitalAndReserves;
         real _TargetFinancingAndReceipts;
         real _NonCurrentAssets;
-        real _CurrentAssets;
         real _RevenueFromSaleOfGoods;
         real _BusinessExpenses;
         real _Assets;
@@ -50,7 +47,6 @@ namespace Ilaria
         real _ShortTermliabilities;
         real _OperatingAssets;
         real _OperatingExpenses;
-        real _NetProfitOfTheReportingPeriod;
         real _Equity;
         real _MostLiqilineAssets;
         real _NetLoss;
@@ -72,8 +68,6 @@ namespace Ilaria
         real GetStocks() const;
         real GetValueAddedTax() const;
         real GetReceivables() const;
-        real GetMaxReceivables() const;
-        real GetMinReceivables() const;
         real GetCurrentLiability() const;
         real GetDefferedIncome() const;
         real GetLongTermCommitment() const;
@@ -81,7 +75,6 @@ namespace Ilaria
         real GetCapitalAndReserves() const;
         real GetTargetFinancingAndReceipts() const;
         real GetNonCurrentAssets() const;
-        real GetCurrentAssets() const;
         real GetRevenueFromSaleOfGoods() const;
         real GetBusinessExpenses() const;
         real GetAssets() const;
@@ -105,12 +98,11 @@ namespace Ilaria
         real GetShortTermliabilities() const;
         real GetOperatingAssets() const;
         real GetOperatingExpenses() const;
-        real GetNetProfitOfTheReportingPeriod() const;
         real GetEquity() const;
         real GetMostLiqilineAssets() const;
         real GetNetLoss() const;
         real GetSales() const;
-        real GetprofitOnSales() const;
+        real GetProfitOnSales() const;
         real GetCostOfProductionAndSales() const;
         real GetAssetsPreviousYear() const;
         real GetRevenueFromSaleOfGoodsPreviousYear() const;
@@ -122,8 +114,6 @@ namespace Ilaria
         void SetStocks(const real& AValue);
         void SetValueAddedTax(const real& AValue);
         void SetReceivables(const real& AValue);
-        void SetMaxReceivables(const real& AValue);
-        void SetMinReceivables(const real& AValue);
         void SetCurrentLiability(const real& AValue);
         void SetDefferedIncome(const real& AValue);
         void SetLongTermCommitment(const real& AValue);
@@ -131,7 +121,6 @@ namespace Ilaria
         void SetCapitalAndReserves(const real& AValue);
         void SetTargetFinancingAndReceipts(const real& AValue);
         void SetNonCurrentAssets(const real& AValue);
-        void SetCurrentAssets(const real& AValue);
         void SetRevenueFromSaleOfGoods(const real& AValue);
         void SetBusinessExpenses(const real& AValue);
         void SetAssets(const real& AValue);
@@ -155,7 +144,6 @@ namespace Ilaria
         void SetShortTermliabilities(const real& AValue);
         void SetOperatingAssets(const real& AValue);
         void SetOperatingExpenses(const real& AValue);
-        void SetNetProfitOfTheReportingPeriod(const real& AValue);
         void SetEquity(const real& AValue);
         void SetMostLiqilineAssets(const real& AValue);
         void SetNetLoss(const real& AValue);

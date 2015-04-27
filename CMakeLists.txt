@@ -13,6 +13,7 @@ set(EA_SOURCES
 	Src/CRatioManager.cxx
 	Src/Models.cxx
 	Src/CModelManager.cxx
+	Src/CPracticeDecoder.cxx
 )
 
 set(EA_HEADERS
@@ -20,6 +21,7 @@ set(EA_HEADERS
 	Include/BasicExcel.hxx
 	Include/ExcelFormat.hxx
 	Include/CEnterprise.hxx
+	Include/CPracticeDecoder.hxx
 	Include/CObserver.hxx
 	Include/CSubject.hxx
 	Include/IlariaTypes.hxx
