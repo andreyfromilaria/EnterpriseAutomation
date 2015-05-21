@@ -13,11 +13,3 @@ CMainWindow::~CMainWindow()
 {
     delete ui;
 }
-
-void CMainWindow::on_pushButton_clicked()
-{
-    QLabel* label = new QLabel(this);
-    label->setText("СИРЁЗНА ДА???");
-    label->setGeometry(QRect(140, 150, 200, 50));
-    label->show();
-}

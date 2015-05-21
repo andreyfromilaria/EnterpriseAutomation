@@ -13,8 +13,29 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        cmainwindow.cpp
+        cmainwindow.cpp \
+    Src/BasicExcel.cxx \
+    Src/CEnterprise.cxx \
+    Src/CModelManager.cxx \
+    Src/CPracticeDecoder.cxx \
+    Src/CRatioManager.cxx \
+    Src/CSubject.cxx \
+    Src/ExcelFormat.cxx \
+    Src/Models.cxx \
+    Src/Ratios.cxx
 
-HEADERS  += cmainwindow.h
+HEADERS  += cmainwindow.h \
+    Include/BasicExcel.hxx \
+    Include/CEnterprise.hxx \
+    Include/CModelManager.hxx \
+    Include/CObserver.hxx \
+    Include/CPracticeDecoder.hxx \
+    Include/CRatioManager.hxx \
+    Include/CSubject.hxx \
+    Include/ExcelFormat.hxx \
+    Include/Ilaria.hxx \
+    Include/IlariaTypes.hxx \
+    Include/Models.hxx \
+    Include/Ratios.hxx
 
 FORMS    += cmainwindow.ui
