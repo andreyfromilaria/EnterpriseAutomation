@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        cmainwindow.cpp
+        cmainwindow.cpp \
+    canimationmanager.cpp
 
-HEADERS  += cmainwindow.h
+HEADERS  += cmainwindow.h \
+    canimationmanager.h
 
 FORMS    += cmainwindow.ui
