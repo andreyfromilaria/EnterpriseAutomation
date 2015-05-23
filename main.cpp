@@ -25,9 +25,9 @@ int main(int argc, char *argv[])
 
     CPracticeDecoder* decoder = new CPracticeDecoder();
 #ifdef _WIN32
-    CEnterprise* enterprise = decoder->LoadResourceFromFile("/Users/andrejstazkin/Documents/LOL.xls");
-#else
     CEnterprise* enterprise = decoder->LoadResourceFromFile("C://LOL.xls");
+#else
+    CEnterprise* enterprise = decoder->LoadResourceFromFile("/Users/andrejstazkin/Documents/LOL.xls");
 #endif
 
     //int x = 200, y = 30, width = 200, h = 30;

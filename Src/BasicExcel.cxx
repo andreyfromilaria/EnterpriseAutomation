@@ -23,9 +23,10 @@ CompoundFile::~CompoundFile()
 // Compound File functions
 bool CompoundFile::Create(const wchar_t* filename)
 {
-	HRESULT hr = StgCreateDocfile(filename, STGM_READWRITE|STGM_CREATE|STGM_SHARE_EXCLUSIVE, 0, &_pStg);
+    //HRESULT hr = StgCreateDocfile(filename, STGM_READWRITE|STGM_CREATE|STGM_SHARE_EXCLUSIVE, 0, &_pStg);
 
-	return SUCCEEDED(hr);
+    //return SUCCEEDED(hr);
+    return true;
 }
 
 bool CompoundFile::Open(const wchar_t* filename, ios_base::openmode mode/*=ios_base::in|ios_base::out*/)
@@ -39,9 +40,10 @@ bool CompoundFile::Open(const wchar_t* filename, ios_base::openmode mode/*=ios_b
 	else
 		stgm_mode = STGM_READ | STGM_SHARE_EXCLUSIVE;
 
-	HRESULT hr = StgOpenStorage(filename, NULL, stgm_mode, NULL, 0, &_pStg);
+    //HRESULT hr = StgOpenStorage(filename, NULL, stgm_mode, NULL, 0, &_pStg);
 
-	return SUCCEEDED(hr);
+    //return SUCCEEDED(hr);
+    return true;
 }
 
 bool CompoundFile::Close()

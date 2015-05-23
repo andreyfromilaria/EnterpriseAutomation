@@ -19,7 +19,7 @@ namespace Ilaria
         
         std::map<E_RATIO_ID, CRatio*> GetRatios() const;
         
-        friend std::ostream& operator << (std::ostream& out, CRatioManager manager);
+        //friend std::ostream& operator << (std::ostream& out, CRatioManager manager);
     };
 };
 

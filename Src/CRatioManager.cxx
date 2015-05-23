@@ -45,7 +45,7 @@ namespace Ilaria
         _mRatios[ERI_R4] = new CReturnOnSalesRatio();
     };
     
-    std::ostream& operator << (std::ostream& out, CRatioManager manager)
+    /*std::ostream& operator << (std::ostream& out, CRatioManager manager)
     {
         out << "L1 = " << manager.GetRatioById(ERI_L1)->GetValue() << std::endl;
         out << "P1 = " << manager.GetRatioById(ERI_P1)->GetValue() << std::endl;
@@ -75,5 +75,5 @@ namespace Ilaria
         out << '\n';
         
         return out;
-    };
+    };*/
 };

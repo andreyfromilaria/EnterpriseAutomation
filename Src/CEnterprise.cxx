@@ -25,11 +25,31 @@ namespace Ilaria
         _pRatioManager = new CRatioManager();
         _pModelManager = new CModelManager();
         
-        for (auto ratio : _pRatioManager->GetRatios())
-            this->AddObserver(ratio.second);
+        //for (auto ratio : _pRatioManager->GetRatios())
+        //    this->AddObserver(ratio.second);
             
-        for (auto model : _pModelManager->GetModels())
-            this->AddObserver(model.second);
+        //for (auto model : _pModelManager->GetModels())
+        //    this->AddObserver(model.second);
+
+        //for(std::map<E_RATIO_ID, CRatio*>::iterator i = (_pRatioManager->GetRatios()).begin(); i != (_pRatioManager->GetRatios()).end(); i++)
+        //{
+        //    this->AddObserver((*i).second);
+        //}
+
+        /*for(std::map<E_RATIO_ID, CRatio*>::iterator i = _pRatioManager->GetRatios().begin(); i != _pRatioManager->GetRatios().end(); i++)
+        {
+            this->AddObserver((*i).second);
+        }*/
+
+        for(int i = 0; i < 15; i++)
+        {
+            this->AddObserver(_pRatioManager->GetRatios()[E_RATIO_ID(i)]);
+        }
+
+        for(int i = 15; i < 21; i++)
+        {
+            this->AddObserver(_pModelManager->GetModels()[E_MODEL_ID(i)]);
+        }
     };
     
     CEnterprise::CEnterprise(CRatioManager* ARatioManager, CModelManager* AModelManager)
@@ -37,11 +57,21 @@ namespace Ilaria
         _pRatioManager = ARatioManager;
         _pModelManager = AModelManager;
         
-        for (auto ratio : _pRatioManager->GetRatios())
-             this->AddObserver(ratio.second);
-        
-        for (auto model : _pModelManager->GetModels())
-            this->AddObserver(model.second);
+        //for (auto ratio : _pRatioManager->GetRatios())
+        //     this->AddObserver(ratio.second);
+
+        //for (auto model : _pModelManager->GetModels())
+        //    this->AddObserver(model.second);
+
+        for(int i = 0; i < 15; i++)
+        {
+            this->AddObserver(_pRatioManager->GetRatios()[E_RATIO_ID(i)]);
+        }
+
+        for(int i = 15; i < 21; i++)
+        {
+            this->AddObserver(_pModelManager->GetModels()[E_MODEL_ID(i)]);
+        }
     };
     
     CRatioManager* CEnterprise::GetRatioManager() const

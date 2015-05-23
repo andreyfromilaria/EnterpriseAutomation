@@ -31,12 +31,18 @@ typedef unsigned short	USHORT;	// 16 bit unsigned integer
 
 #ifdef _MSC_VER
 typedef unsigned long	DWORD;	// 32 bit unsigned integer
-typedef long			LONG;	// 32 bit signed integer
+//typedef long			LONG;	// 32 bit signed integer
 typedef unsigned long	ULONG;	// 32 bit unsigned integer
 #else
 typedef unsigned int	DWORD;	// 32 bit unsigned integer
-typedef int				LONG;	// 32 bit signed integer
+//typedef int				LONG;	// 32 bit signed integer
 typedef unsigned int	ULONG;	// 32 bit unsigned integer
+#endif
+
+#ifdef _MSC_VER
+typedef int LONG;
+#else
+typedef long LONG;
 #endif
 
 typedef short	OFFSET;
