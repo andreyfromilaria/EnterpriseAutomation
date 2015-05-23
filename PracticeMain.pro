@@ -14,6 +14,7 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         cmainwindow.cpp \
+<<<<<<< HEAD
     Src/BasicExcel.cxx \
     Src/CEnterprise.cxx \
     Src/CModelManager.cxx \
@@ -39,5 +40,11 @@ HEADERS  += cmainwindow.h \
     Include/Models.hxx \
     Include/Ratios.hxx \
     Include/CReportManipulator.hxx
+=======
+    canimationmanager.cpp
+
+HEADERS  += cmainwindow.h \
+    canimationmanager.h
+>>>>>>> animation
 
 FORMS    += cmainwindow.ui

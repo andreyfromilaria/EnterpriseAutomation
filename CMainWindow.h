@@ -13,11 +13,24 @@ class CMainWindow : public QMainWindow
 
 public:
     explicit CMainWindow(QWidget *parent = 0);
+    QString getCurrentFileName();
     ~CMainWindow();
 
+<<<<<<< HEAD
+=======
+private slots:
+
+
+    void on_pcmdNew_clicked();
+
+    void on_pcmdExit_clicked();
+
+    void on_pcmdGenerate_clicked();
+>>>>>>> animation
 
 private:
     Ui::CMainWindow *ui;
+    QString sExcelFileName;
 };
 
 #endif // CMAINWINDOW_H
