@@ -2,7 +2,7 @@
 #include "Include/CEnterprise.hxx"
 #include "Include/ExcelFormat.hxx"
 
-const int EXT_LENGTH = 3;
+extern int EXT_LENGTH = 3;
 
 namespace Ilaria
 {
@@ -33,41 +33,59 @@ namespace Ilaria
         real longTermCommitment = worksheet->Cell(42, i)->GetInteger();
         real loans              = worksheet->Cell(38, i)->GetInteger();
         real capitalAndReserves = worksheet->Cell(36, i)->GetInteger();
-        //real targetFinancingAndReceipts;
+
+
+        //real targetFinancingAndReceipts = worksheet->Cell(47, i)->GetInteger();
+
+
         real nonCurrentAssets   = worksheet->Cell(14, i)->GetInteger();
-        //real currentAssets;
+
+
+        //real currentAssets = worksheet->Cell(24, i)->GetInteger();
+
+
         real revenueFromSaleOfGoods = worksheet->Cell(57, i)->GetInteger();
         real businessExpenses   = worksheet->Cell(60, i)->GetInteger();
         real assets             = worksheet->Cell(25, i)->GetInteger();
         real managementCosts    = worksheet->Cell(61, i)->GetInteger();
         real payables           = worksheet->Cell(45, i)->GetInteger();
-        //real debtParticipants;
+
+
+        //real debtParticipants = worksheet->Cell(14, i)->GetInteger();
+
+
         real costOfGoodSold     = worksheet->Cell(58, i)->GetInteger();
         real profitBeforeTax    = worksheet->Cell(64, i)->GetInteger();
         real incomeTax          = worksheet->Cell(73, i)->GetInteger();
         real nonOperatingIncome = worksheet->Cell(71, i)->GetInteger();
         real netProfit          = worksheet->Cell(79, i)->GetInteger();
-        //real uncoveredLoss;
-        //real totalAssets;
-        //real borrowings;
-        //real totalLiabilities;
-        //real netWorkingCapital;
-        //real interestPayable;
-        //real marketValueOfEquity;
-        //real costTotalDebt;
-        //real tangibleAssets;
-        //real shortTermliabilities;
-        //real operatingAssets;
-        //real operatingExpenses;
-        //real netProfitOfTheReportingPeriod;
-        //real equity;
-        //real mostLiqilineAssets;
-        //real netLoss;
-        //real sales;
+
+
+        //real uncoveredLoss = worksheet->Cell(14, i)->GetInteger();
+        //real totalAssets = worksheet->Cell(14, i)->GetInteger();
+        //real borrowings = worksheet->Cell(14, i)->GetInteger();
+        //real totalLiabilities = worksheet->Cell(14, i)->GetInteger();
+        //real netWorkingCapital = worksheet->Cell(14, i)->GetInteger();
+        //real interestPayable = worksheet->Cell(14, i)->GetInteger();
+        //real marketValueOfEquity = worksheet->Cell(14, i)->GetInteger();
+        //real costTotalDebt = worksheet->Cell(14, i)->GetInteger();
+        //real tangibleAssets = worksheet->Cell(14, i)->GetInteger();
+        //real shortTermliabilities = worksheet->Cell(14, i)->GetInteger();
+        //real operatingAssets = worksheet->Cell(14, i)->GetInteger();
+        //real operatingExpenses = worksheet->Cell(14, i)->GetInteger();
+        //real netProfitOfTheReportingPeriod = worksheet->Cell(14, i)->GetInteger();
+        //real equity = worksheet->Cell(14, i)->GetInteger();
+        //real mostLiqilineAssets = worksheet->Cell(14, i)->GetInteger();
+        //real netLoss = worksheet->Cell(14, i)->GetInteger();
+        //real sales = worksheet->Cell(14, i)->GetInteger();
+
+
         real profitOnSales      = worksheet->Cell(63, i)->GetInteger();
-        //real costOfProductionAndSales;
-        //real assetsPreviousYear;
-        //real revenueFromSaleOfGoodsPreviousYear;
+
+
+        //real costOfProductionAndSales = worksheet->Cell(14, i)->GetInteger();
+        //real assetsPreviousYear = worksheet->Cell(14, i)->GetInteger();
+        //real revenueFromSaleOfGoodsPreviousYear = worksheet->Cell(14, i)->GetInteger();
 
         
         enterprise->SetTurnaroundActives(turnaroundActives);

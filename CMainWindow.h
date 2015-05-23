@@ -2,6 +2,8 @@
 #define CMAINWINDOW_H
 
 #include <QMainWindow>
+#include "Include/CEnterprise.hxx"
+#include "CReport.h"
 
 namespace Ui {
 class CMainWindow;
@@ -16,8 +18,6 @@ public:
     QString getCurrentFileName();
     ~CMainWindow();
 
-<<<<<<< HEAD
-=======
 private slots:
 
 
@@ -26,11 +26,18 @@ private slots:
     void on_pcmdExit_clicked();
 
     void on_pcmdGenerate_clicked();
->>>>>>> animation
+
+    void on_pushButton_clicked();
+
+    void on_pcmdGenerate_released();
+
+    void on_pcmdGenerate_pressed();
 
 private:
     Ui::CMainWindow *ui;
     QString sExcelFileName;
+    Ilaria::CEnterprise* e;
+    Ilaria::CReport* report;
 };
 
 #endif // CMAINWINDOW_H

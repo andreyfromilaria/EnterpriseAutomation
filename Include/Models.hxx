@@ -3,6 +3,7 @@
 
 #include "CObserver.hxx"
 #include "IlariaTypes.hxx"
+#include <QString>
 
 namespace Ilaria
 {
@@ -12,6 +13,8 @@ namespace Ilaria
         real _Value;
     public:
         virtual real GetValue() const;
+        virtual QString GetName() = 0;
+        virtual QString GetResult() = 0;
     };
     
     class CTFModel : public CModel
@@ -20,6 +23,8 @@ namespace Ilaria
         CTFModel() {} ;
         
         virtual void Update(CSubject* ASubject);
+        virtual QString GetName() { return QString("Двухфакторная модель"); };
+        virtual QString GetResult();
     };
     
     class CAltmanModel : public CModel
@@ -28,6 +33,8 @@ namespace Ilaria
         CAltmanModel() {} ;
         
         virtual void Update(CSubject* ASubject);
+        virtual QString GetName() { return QString("Модель Альтмана"); };
+        virtual QString GetResult();
     };
     
     class CTATModel : public CModel
@@ -36,6 +43,8 @@ namespace Ilaria
         CTATModel() {} ;
         
         virtual void Update(CSubject* ASubject);
+        virtual QString GetName() { return QString("Модель Тоффлера и Тисшоу"); };
+        virtual QString GetResult();
     };
     
     class CRModel : public CModel
@@ -44,6 +53,8 @@ namespace Ilaria
         CRModel() {} ;
         
         virtual void Update(CSubject* ASubject);
+        virtual QString GetName() { return QString("Модель R-счёта"); };
+        virtual QString GetResult();
     };
     
     class CDAModel : public CModel
@@ -77,6 +88,8 @@ namespace Ilaria
         real GetNorm();
         
         virtual void Update(CSubject* ASubject);
+        virtual QString GetName() { return QString("Модель Дискриминатного анализа"); };
+        virtual QString GetResult();
     };
     
     class CZModel : public CModel
@@ -85,6 +98,8 @@ namespace Ilaria
         CZModel() {} ;
         
         virtual void Update(CSubject* ASubject);
+        virtual QString GetName() { return QString("Модель Зайцевой"); };
+        virtual QString GetResult();
     };
     
     class CRegressionModel : public CModel
@@ -93,6 +108,8 @@ namespace Ilaria
         CRegressionModel() {} ;
         
         virtual void Update(CSubject* ASubject);
+        virtual QString GetName() { return QString("Регрессионная модель"); };
+        virtual QString GetResult();
     };
 };
 

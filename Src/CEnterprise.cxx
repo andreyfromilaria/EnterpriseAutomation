@@ -68,7 +68,7 @@ namespace Ilaria
             this->AddObserver(_pRatioManager->GetRatios()[E_RATIO_ID(i)]);
         }
 
-        for(int i = 15; i < 21; i++)
+        for(int i = 15; i < 22; i++)
         {
             this->AddObserver(_pModelManager->GetModels()[E_MODEL_ID(i)]);
         }

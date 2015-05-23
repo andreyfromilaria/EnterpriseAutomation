@@ -256,4 +256,71 @@ namespace Ilaria
             _Value = C_LP - C_F - C_A - C_R - 1.52;
         };
     };
+
+    QString CTFModel::GetResult()
+    {
+        if (_Value > 0)
+        {
+            return QString("Для данного предприятия существует большая вероятность банкротства");
+        }
+        else
+        {
+            return QString("Для данного предприятия существует низкая вероятность банкротства");
+        }
+    };
+
+    QString CAltmanModel::GetResult()
+    {
+        if (_Value < 2.7)
+        {
+            return QString("Вероятность банкротства высока");
+        }
+        else
+        {
+            return QString("Вероятность банкротства не высока");
+        }
+    };
+
+    QString CTATModel::GetResult()
+    {
+        if(_Value > 1.425)
+        {
+            return QString("C вероятностью в 95% в ближайший год банкротства не будет и с 79% вероятностью его не будет в течение следующих 5 лет.");
+        }
+        else
+        {
+            return QString("Для данного предприятия результат не определён");
+        }
+    };
+
+    QString CRModel::GetResult()
+    {
+        if (_Value < 0)
+        {
+            return QString("Вероятность банкротства максимальная (90-100%)");
+        }
+        else if ((_Value > 0.18) && (_Value < 0.32))
+        {
+            return QString("Вероятность банкротства средняя (35-50%)");
+        }
+        else if (_Value > 0.42)
+        {
+            return QString("Вероятность банкротства минимальная (10% и меньше)");
+        }
+    };
+
+    QString CDAModel::GetResult()
+    {
+        return QString("1");
+    };
+
+    QString CZModel::GetResult()
+    {
+        return QString("2");
+    };
+
+    QString CRegressionModel::GetResult()
+    {
+        return QString("3");
+    };
 };

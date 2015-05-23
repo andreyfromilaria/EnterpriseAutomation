@@ -8,14 +8,18 @@
 #include <QMessageBox>
 #include <QCheckBox>
 #include <QVector>
+#include "Include/Ilaria.hxx"
+#include "Writers.hxx"
 
 QPropertyAnimation* wgtReportAnimation;
 QVector<QCheckBox*> vCheckBox;
 
+using namespace Ilaria;
+
 CMainWindow::CMainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::CMainWindow)
-{
+{   
     ui->setupUi(this);
 
     ui->wgtReport->setGeometry(QRect(0,-434,651,434));
@@ -54,8 +58,8 @@ CMainWindow::CMainWindow(QWidget *parent) :
     ui->checkRCount->setGeometry(QRect(10,160,191,17));
     ui->checkKovalenko->setGeometry(QRect(10,180,171,17));
     ui->checkZayceva->setGeometry(QRect(10,200,141,17));
-    ui->checkFedotova->setGeometry(QRect(10,220,151,17));
-    ui->checkRegression->setGeometry((QRect(10,240,171,17)));
+    //ui->checkFedotova->setGeometry(QRect(10,220,151,17));
+    ui->checkRegression->setGeometry((QRect(10,220,151,17)));
 
     ui->pcmdGenerate->setGeometry(QRect(10,40,151,41));
 
@@ -74,7 +78,7 @@ CMainWindow::CMainWindow(QWidget *parent) :
 
 
     vCheckBox << ui->checkDoubleFactor << ui->checkAltman << ui->checkTuffler << ui->checkRCount << ui->checkKovalenko
-            << ui->checkZayceva << ui->checkFedotova << ui->checkRegression;
+              << ui->checkZayceva << ui->checkRegression;
 
 
 
@@ -85,8 +89,6 @@ CMainWindow::~CMainWindow()
 {
     delete ui;
 }
-<<<<<<< HEAD
-=======
 
 QString CMainWindow::getCurrentFileName()
 {
@@ -96,35 +98,89 @@ QString CMainWindow::getCurrentFileName()
 void CMainWindow::on_pcmdNew_clicked()
 {
     sExcelFileName = QFileDialog::getOpenFileName(0, "Open File", "", "*.xlsx *.xls");
+
+    CPracticeDecoder* d = new CPracticeDecoder();
+
     if (!sExcelFileName.isEmpty())
     {
+        e = d->LoadResourceFromFile(sExcelFileName.toStdString());
+        report = new CReport(e);
         wgtReportAnimation->start();
     }
 }
 
 void CMainWindow::on_pcmdExit_clicked()
 {
+    //CTXTWriter wrt;
+    //wrt.SaveFile(QString("/Users/andrejstazkin/Documents/paskuda.txt"), report);
     close();
 }
 
 void CMainWindow::on_pcmdGenerate_clicked()
 {
-    QMessageBox msgError;
+    /*QMessageBox msgError;
     msgError.setText("Ни одна модель не выбрана");
     bool isChecked = false;
+
+    report->ChangeModelActive(ui->checkAltman->isChecked(), EMI_ALTMAN);
+    report->ChangeModelActive(ui->checkDoubleFactor->isChecked(), EMI_TF);
+    report->ChangeModelActive(ui->checkRCount->isChecked(), EMI_R);
+    report->ChangeModelActive(ui->checkKovalenko->isChecked(), EMI_DA);
+    report->ChangeModelActive(ui->checkZayceva->isChecked(), EMI_Z);
+    report->ChangeModelActive(ui->checkRegression->isChecked(), EMI_REGRESSION);
+    report->ChangeModelActive(ui->checkTuffler->isChecked(), EMI_TAT);
 
     QVector<QCheckBox*>::iterator it = vCheckBox.begin();
 
     for(; it != vCheckBox.end(); it++)
     {
         QCheckBox* temp = *it;
-       if (temp->isChecked())
+        if (temp->isChecked())
         {
             isChecked = true;
         }
     }
 
-    if (!isChecked) msgError.show();
+    if (!isChecked) msgError.show();*/
+}
+
+void CMainWindow::on_pushButton_clicked()
+{
 
 }
->>>>>>> animation
+
+void CMainWindow::on_pcmdGenerate_released()
+{
+    QString fileNameBlo = QFileDialog::getSaveFileName(0, "Save File", "", "*.txt");
+    CTXTWriter wrt;
+    wrt.SaveFile(fileNameBlo, report);
+}
+
+void CMainWindow::on_pcmdGenerate_pressed()
+{
+    //QMessageBox msgError;
+    //    msgError.setText("Ни одна модель не выбрана");
+    //    bool isChecked = false;
+
+        report->ChangeModelActive(ui->checkAltman->isChecked(), EMI_ALTMAN);
+        report->ChangeModelActive(ui->checkDoubleFactor->isChecked(), EMI_TF);
+        report->ChangeModelActive(ui->checkRCount->isChecked(), EMI_R);
+        report->ChangeModelActive(ui->checkKovalenko->isChecked(), EMI_DA);
+        report->ChangeModelActive(ui->checkZayceva->isChecked(), EMI_Z);
+        report->ChangeModelActive(ui->checkRegression->isChecked(), EMI_REGRESSION);
+        report->ChangeModelActive(ui->checkTuffler->isChecked(), EMI_TAT);
+
+        /*QVector<QCheckBox*>::iterator it = vCheckBox.begin();
+
+        for(; it != vCheckBox.end(); it++)
+        {
+            QCheckBox* temp = *it;
+            if (temp->isChecked())
+            {
+                isChecked = true;
+            }
+        }
+
+        if (!isChecked) msgError.show();*/
+
+}
