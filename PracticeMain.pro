@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     Src/CSubject.cxx \
     Src/ExcelFormat.cxx \
     Src/Models.cxx \
-    Src/Ratios.cxx
+    Src/Ratios.cxx \
+    Src/CReportManipulator.cxx
 
 HEADERS  += cmainwindow.h \
     Include/BasicExcel.hxx \
@@ -36,6 +37,7 @@ HEADERS  += cmainwindow.h \
     Include/Ilaria.hxx \
     Include/IlariaTypes.hxx \
     Include/Models.hxx \
-    Include/Ratios.hxx
+    Include/Ratios.hxx \
+    Include/CReportManipulator.hxx
 
 FORMS    += cmainwindow.ui

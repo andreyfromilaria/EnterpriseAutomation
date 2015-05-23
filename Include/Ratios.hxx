@@ -3,6 +3,9 @@
 
 #include "IlariaTypes.hxx"
 #include "CObserver.hxx"
+#include <QString>
+
+typedef QString ratioName;
 
 namespace Ilaria
 {
@@ -15,8 +18,9 @@ namespace Ilaria
 
         virtual real GetValue() const;
         virtual E_RATIO_STATE GetState() = 0;
-        
-        
+        virtual ratioName GetLongRatioName() = 0;
+        virtual ratioName GetShortRatioName() = 0;
+
         E_RATIO_STATE GetState(real ARatio, real AFirst, real ASecond, real AThird, real AFourth, real AFifth, real ASixth);
         
         friend class CEnterprise;
@@ -28,6 +32,8 @@ namespace Ilaria
         CLiquidityAndSolvencyRatio() {} ;
         
         virtual E_RATIO_STATE GetState() = 0;
+        virtual ratioName GetLongRatioName() = 0;
+        virtual ratioName GetShortRatioName() = 0;
         
         friend class CEnterprise;
     };
@@ -38,6 +44,8 @@ namespace Ilaria
         CFinancialStabilityRatio() {} ;
 
         virtual E_RATIO_STATE GetState() = 0;
+        virtual ratioName GetLongRatioName() = 0;
+        virtual ratioName GetShortRatioName() = 0;
         
         friend class CEnterprise;
     };
@@ -48,6 +56,8 @@ namespace Ilaria
         CBusinessActivityRatio() {} ;
 
         virtual E_RATIO_STATE GetState() = 0;
+        virtual ratioName GetLongRatioName() = 0;
+        virtual ratioName GetShortRatioName() = 0;
         
         friend class CEnterprise;
     };
@@ -56,6 +66,8 @@ namespace Ilaria
     {
     public:
         CProfitabilityRatio() {} ;
+        virtual ratioName GetLongRatioName() = 0;
+        virtual ratioName GetShortRatioName() = 0;
 
         virtual E_RATIO_STATE GetState() = 0;
         
@@ -66,9 +78,11 @@ namespace Ilaria
     {
     public:
         CQuickRatio() {} ;
-        
+
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
         
         friend class CEnterprise;
     };
@@ -80,6 +94,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
         
         friend class CEnterprise;
     };
@@ -91,6 +107,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
         
         friend class CEnterprise;
     };
@@ -102,6 +120,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
         
         friend class CEnterprise;
     };
@@ -113,6 +133,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -124,6 +146,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -135,6 +159,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -146,6 +172,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -157,6 +185,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -168,6 +198,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -179,6 +211,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -190,6 +224,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -201,6 +237,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -212,6 +250,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };
@@ -223,6 +263,8 @@ namespace Ilaria
 
         virtual E_RATIO_STATE GetState();
         virtual void Update(CSubject* ASubject);
+        virtual ratioName GetLongRatioName();
+        virtual ratioName GetShortRatioName();
     
         friend class CEnterprise;
     };

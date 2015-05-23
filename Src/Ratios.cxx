@@ -21,6 +21,156 @@ namespace Ilaria
     {
         return _Value;
     };
+
+    ratioName CQuickRatio::GetLongRatioName()
+    {
+        return "Коэффициент быстрой ликвидности";
+    };
+
+    ratioName CQuickRatio::GetShortRatioName()
+    {
+        return "L1";
+    };
+
+    ratioName CCurrentLiquidityRatio::GetLongRatioName()
+    {
+        return "Коэффициент текущей ликвдности";
+    };
+
+    ratioName CCurrentLiquidityRatio::GetShortRatioName()
+    {
+        return "P1";
+    };
+
+    ratioName CCoverageReservesRatio::GetLongRatioName()
+    {
+        return "Коэффициент покрытия запасов";
+    };
+
+    ratioName CCoverageReservesRatio::GetShortRatioName()
+    {
+        return "L3";
+    };
+
+    ratioName CFinancialDependenceRatio::GetLongRatioName()
+    {
+        return "Коэффициент финансовой зависимости";
+    };
+
+    ratioName CFinancialDependenceRatio::GetShortRatioName()
+    {
+        return "F1";
+    };
+
+    ratioName COwnFundsAutonomyRatio::GetLongRatioName()
+    {
+        return "Коэффициент автономии собственных средств";
+    };
+
+    ratioName COwnFundsAutonomyRatio::GetShortRatioName()
+    {
+        return "F2";
+    };
+
+    ratioName CStocksWorkingCapitalRatio::GetLongRatioName()
+    {
+        return "Kоэффициент обеспеченности запасов собственными оборотными средствами";
+    };
+
+    ratioName CStocksWorkingCapitalRatio::GetShortRatioName()
+    {
+        return "F3";
+    };
+
+    ratioName CConstantAssetRatio::GetLongRatioName()
+    {
+        return "Kоэффициент постоянного актива";
+    };
+
+    ratioName CConstantAssetRatio::GetShortRatioName()
+    {
+        return "F4";
+    };
+
+    ratioName CTurnoverAssetsRatio::GetLongRatioName()
+    {
+        return "Kоэффициент оборачиваемости активов";
+    };
+
+    ratioName CTurnoverAssetsRatio::GetShortRatioName()
+    {
+        return "A2";
+    };
+
+    ratioName CTurnoverAccountsPayableRatio::GetLongRatioName()
+    {
+        return "Kоэффициент оборачиваемости кредиторской задолженности";
+    };
+
+    ratioName CTurnoverAccountsPayableRatio::GetShortRatioName()
+    {
+        return "A4";
+    };
+
+    ratioName CTurnoverReceivablesRatio::GetLongRatioName()
+    {
+        return "Kоэффициент оборачиваемости дебиторской задолженности";
+    };
+
+    ratioName CTurnoverReceivablesRatio::GetShortRatioName()
+    {
+        return "A5";
+    };
+
+    ratioName CTurnoverStocksRatio::GetLongRatioName()
+    {
+        return "Kоэффициент оборачиваемости запасов";
+    };
+
+    ratioName CTurnoverStocksRatio::GetShortRatioName()
+    {
+        return "A6";
+    };
+
+    ratioName COverallProfitabilityRatio::GetLongRatioName()
+    {
+        return "Kоэффициент общей рентабельности";
+    };
+
+    ratioName COverallProfitabilityRatio::GetShortRatioName()
+    {
+        return "R1";
+    };
+
+    ratioName CReturnOnAssetsRatio::GetLongRatioName()
+    {
+        return "Kоэффициент рентабельности активов";
+    };
+
+    ratioName CReturnOnAssetsRatio::GetShortRatioName()
+    {
+        return "R2";
+    };
+
+    ratioName CROERatio::GetLongRatioName()
+    {
+        return "Kоэффициент ренатбельности собственного капитала";
+    };
+
+    ratioName CROERatio::GetShortRatioName()
+    {
+        return "R3";
+    };
+
+    ratioName CReturnOnSalesRatio::GetLongRatioName()
+    {
+        return "Kоэффициент рентабельности продукции (продаж)";
+    };
+
+    ratioName CReturnOnSalesRatio::GetShortRatioName()
+    {
+        return "R4";
+    };
     
     E_RATIO_STATE CQuickRatio::GetState()
     {
